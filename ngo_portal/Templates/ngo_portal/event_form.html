@@ -1,0 +1,14 @@
+{% extends "ngo_portal/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Create NGO Event</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}  {# This renders all fields from your NGOEventForm automatically #}
+  <button type="submit">Create</button>
+</form>
+
+<a href="{% url 'event_list' %}">Back to Event List</a>
+{% endblock %}

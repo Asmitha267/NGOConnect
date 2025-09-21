@@ -1,0 +1,6 @@
+<h2>Apply to {{ event.title }}</h2>
+<form method="post">
+  {% csrf_token %}
+  Motivation: <textarea name="motivation"></textarea><br>
+  <button type="submit">Apply</button>
+</form>
